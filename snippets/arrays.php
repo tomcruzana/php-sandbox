@@ -4,6 +4,8 @@
 <body>
 
     <?php
+    /* https://www.php.net/manual/en/ref.array.php */
+
     # arrays
     $cars = ["toyota", "honda", 12.3];
     var_dump($cars);
@@ -86,6 +88,26 @@
     // array_slice - Extracts a portion of an array starting from a specified position. (see optional params)
     array_splice($languages, 0, 2, 100);
 
+    // array_unique - Removes duplicate values
+    array_unique($languages);
+
+    // returns all keys
+    array_keys($languages);
+
+    // returns all values
+    array_values($languages);
+
+    // flip sting and integer values of an associative array
+    array_flip($languages);
+
+    // shuffles the order of the elements of the array
+    shuffle($languages);
+
+    // array pointer helper functions
+    end($languages);
+    current($languages);
+    prev($languages);
+    next($languages);
     ?>
 
 </body>
