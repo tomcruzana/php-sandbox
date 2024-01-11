@@ -54,4 +54,50 @@ print_r(explode("@foo", $str1));
 $str2 = "lol#oof#sheez";
 print_r(explode("#", $str2));
 
+// replace string
+$str2 = "welcome back!"; 
+echo str_replace("back", "home", $str2);
+
+// remove html tags
+$html_text_content = "<p>lol</p>";
+echo strip_tags($html_text_content);
+
+// escape special characters
+$name = "tom's world";
+echo addslashes($name);
+
+// remove slashes
+$str_with_slashes = "\yes \sir";
+echo stripslashes($str_with_slashes);
+
+// trim white space
+$str_with_spaces = "    no!   ";
+echo trim($str_with_spaces);
+
+// shuffle characters in a string
+$shuffle_me = "hello there!";
+echo str_shuffle($shuffle_me);
+
+$otp = "1726341237472364782346253";
+echo substr(str_shuffle($otp), 0, 6);
+
+// hash password string
+$pwd = "password123";
+echo md5($pwd); // not recommended for password hashing
+echo password_hash($pwd, PASSWORD_DEFAULT);
+
+// verify password hash
+$hash = '$2y$10$.vGA1O9wmRjrwAVXD98HNOgsNpDczlqm3Jq7KnEd1rVAGv3Fykk1a';
+
+if (password_verify('rasmuslerdorf', $hash)) {
+    echo 'Password is valid!';
+} else {
+    echo 'Invalid password.';
+}
+
+// encode string to base64
+$str3 = "test";
+echo base64_encode($str3);
+echo base64_decode("dGVzdA==j");
+
 ?>
